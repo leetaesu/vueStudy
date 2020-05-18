@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import MemberJoin from '../views/MemberJoin.vue'
+import MemberOut from '../views/MemberOut.vue'
+import Main from '../views/Main.vue'
 
 Vue.use(VueRouter)
 
@@ -9,13 +11,35 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
-  },
-  {
-    path: '/join',
-    name: 'MemberJoin',
-    component: MemberJoin
+    component: Home,
+    children: [
+      {
+        path: 'main',
+        name: 'Main',
+        component: Main
+      },
+      {
+        path: 'join',
+        name: 'MemberJoin',
+        component: MemberJoin
+      },
+      {
+        path: 'out',
+        name: 'MemberOut',
+        component: MemberOut
+      }
+    ]
   }
+  // {
+  //   path: '/join',
+  //   name: 'MemberJoin',
+  //   component: MemberJoin
+  // },
+  // {
+  //   path: '/out',
+  //   name: 'MemberOut',
+  //   component: MemberOut
+  // }
   // {
   //   path: '/about',
   //   name: 'About',

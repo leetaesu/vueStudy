@@ -1,8 +1,9 @@
 <template>
   <div class="header">
     <div id="nav">
-      <router-link to="/">Main</router-link> |
+      <router-link to="/main">Main</router-link>
       <router-link to="/join">회원가입</router-link>
+      <router-link to="/out">회원탈퇴</router-link>
     </div>
     <img src="https://common-cdn-api.joycityglobal.com/portal/common/txt/txt_logo2.png" alt="">
   </div>
